@@ -4,7 +4,9 @@
 	"description": "",
 	"main": "bindings/node",
 	"scripts": {
-		"format": "prettier --write ./grammar.js"
+		"format": "prettier --write ./grammar.js",
+		"build": "tree-sitter generate && node-gyp build",
+		"test": "npm run-script build && tree-sitter test"
 	},
 	"keywords": [],
 	"author": "Devaune Whittle <https://github.com/devnote-dev>",
